@@ -1,0 +1,31 @@
+<p>
+  <b>Id:</b>
+  <%=h @leilao.id %>
+</p>
+
+<p>
+  <b>Proprietario:</b>
+  <%=h @leilao.proprietario %>
+</p>
+
+<p>
+  <b>Lances:</b>
+</p>
+
+<p>
+  <b>Datacriacao:</b>
+  <%=h @leilao.dataCriacao %>
+</p>
+
+<p>
+  <b>Dataexpiracao:</b>
+  <%=h @leilao.dataExpiracao %>
+</p>
+
+<p>
+  <b>Item:</b>
+</p>
+
+
+<%= link_to 'Edit', edit_leilao_path(@leilao) %> |
+<%= link_to 'Back', leilaos_path %>

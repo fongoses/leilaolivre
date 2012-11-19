@@ -1,0 +1,32 @@
+<h1>Editing leilao</h1>
+
+<% form_for(@leilao) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :id %><br />
+    <%= f.text_field :id %>
+  </p>
+  <p>
+    <%= f.label :proprietario %><br />
+    <%= f.text_field :proprietario %>
+  </p>
+  <p>
+  </p>
+  <p>
+    <%= f.label :dataCriacao %><br />
+    <%= f.datetime_select :dataCriacao %>
+  </p>
+  <p>
+    <%= f.label :dataExpiracao %><br />
+    <%= f.datetime_select :dataExpiracao %>
+  </p>
+  <p>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @leilao %> |
+<%= link_to 'Back', leilaos_path %>

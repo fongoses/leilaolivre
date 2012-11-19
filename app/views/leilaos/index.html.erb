@@ -1,0 +1,28 @@
+<h1>Leilões Existentes</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Proprietario</th>
+    <th>Lances</th>
+    <th>Datacriacao</th>
+    <th>Dataexpiracao</th>
+    <th>Item</th>
+  </tr>
+
+<% @leilaos.each do |leilao| %>
+  <tr>
+    <td><%=h leilao.id %></td>
+    <td><%=h leilao.proprietario %></td>
+    <td><%=h leilao.dataCriacao %></td>
+    <td><%=h leilao.dataExpiracao %></td>
+    <td><%= link_to 'Show', leilao %></td>
+    <td><%= link_to 'Edit', edit_leilao_path(leilao) %></td>
+    <td><%= link_to 'Destroy', leilao, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New leilao', new_leilao_path %>
