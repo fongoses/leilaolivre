@@ -26,30 +26,22 @@
   <b>Item:</b>
 </p>
 
-	<h2>Lances Atuais</h2>
+<h2>Lances</h2>
 	<% @leilao.lances.each do |lance| %>
 	  <p>
 	    <b>idUsuario:</b>
-	    <%=h lance.id%>
+	    <%= lance.idUsuario %>
 	  </p>
-	<% end %>	 
-	<h2>Adicionar Lances:</h2>
-	<% form_for @leilao.lances.build do |f| %>
-	  <div class="field">
-	  </div>
-
-	<div class ='field'>
-		<%= hidden_field_tag "userId", params[:id] %>
-	</div>
-
-	  <div class="actions">
-		User_id: <%= params[:id] %>
-		<%= f.submit %>
-  	  </div>
- 
 	<% end %>
-
-
+	 
+	<h2>Adicionar Lances:</h2>
+	<% form_for([@leilao, @leilao.lances.build]) do |f| %>
+	  <div class="field">
+	    <%= f.label :idUsuario %><br />
+	    <%= f.text_field :idUsuario %>
+	  </div>
+	<% end %>
+	 
 	<br />
 	 
 	<%= link_to 'Edit Leilao', edit_leilao_path(@leilao) %> |

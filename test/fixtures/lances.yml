@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  idLeilao: 1
+  idItem: 1
+  idUsuario: 1
+  leilao: 
+
+two:
+  id: 1
+  idLeilao: 1
+  idItem: 1
+  idUsuario: 1
+  leilao: 

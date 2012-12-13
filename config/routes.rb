@@ -1,5 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :leilaos
+ # map.resources :leilaos
+
+
+
+  map.resources :leilaos do
+ 	map.resources :lances #adicionada rota para recurso lances em leilao
+  end
+	
 
   # The priority is based upon order of creation: first created -> highest priority.
 
