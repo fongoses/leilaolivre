@@ -40,9 +40,9 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  # map.root :controller => "welcome"
-    #map.root :controller => "home"
-#map.root :controller => "leilao"
+   #map.root :controller => "welcome"
+   #map.root :controller => "home"
+     map.root :controller => "main_controller"
 
 
   # See how all your routes lay out with "rake routes"
@@ -51,6 +51,5 @@ ActionController::Routing::Routes.draw do |map|
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:id'
-  
 
 end
