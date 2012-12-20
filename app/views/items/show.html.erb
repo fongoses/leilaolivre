@@ -1,0 +1,18 @@
+<p>
+  <b>Iditem:</b>
+  <%=h @item.idItem %>
+</p>
+
+<p>
+  <b>Nomeitem:</b>
+  <%=h @item.nomeItem %>
+</p>
+
+<p>
+  <b>Linkfoto:</b>
+  <%=h @item.linkfoto %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

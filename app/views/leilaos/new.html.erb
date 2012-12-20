@@ -1,29 +1,96 @@
-<h1>New leilao</h1>
+<head>
+<style type="text/css">
+body {
+	background-image:url('../images/background.png');
+	background-repeat: repeat-x;
+	margin: 0px;
+}
 
-<% form_for(@leilao) do |f| %>
-  <%= f.error_messages %>
+#divLogo{
+	
+	background-image:url('../images/logo.png');
+	background-color: white;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 140px;
+}
 
-  <p>
-  </p>
-  <p>
-    <%= f.label :proprietario %><br />
-    <%= f.text_field :proprietario %>
-  </p>
-  <p>
-  </p>
-  <p>
-    <%= f.label :dataCriacao %><br />
-    <%= f.datetime_select :dataCriacao %>
-  </p>
-  <p>
-    <%= f.label :dataExpiracao %><br />
-    <%= f.datetime_select :dataExpiracao %>
-  </p>
-  <p>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
 
-<%= link_to 'Back', leilaos_path %>
+#divTopBar{
+	background-image:url('../images/topbar.png');
+	background-repeat: repeat-x;
+	width: 100%;
+	height: 38px;
+}
+
+
+</STYLE>
+</head>
+
+
+
+
+
+
+<body>
+	
+	
+	<div id="divLogo"></div>
+	<div id="divTopBar"></div>
+	
+	
+
+	<h1>Criar novo leilao</h1>
+
+	<% form_for(@leilao) do |f| %>
+	  <%= f.error_messages %>
+
+	  <p>
+		<%= f.label :idLeilao %><br />
+		<%= f.text_field :idLeilao %>
+	  </p>
+	  <p>
+		<%= f.label :idProprietario %><br />
+		<%= f.text_field :idProprietario %>
+	  </p>
+	  <p>
+		<%= f.label :Lances %><br />
+		<!-- Gui de lances -->
+	  </p>
+	  <p>
+		<%= f.label :DataCriacao %><br />
+		<%-# f.datetime_select :DataCriacao remover '-# e - final' para remover comentario-%>
+	  </p>
+	  <p>
+		<%= f.label :DataExpiracao %><br />
+		<%-# f.datetime_select :DataExpiracao -%>
+	  </p>
+	  <p>
+		<%= f.label :Item %><br />
+		<%-# f.text_field :Item -%>    
+	  </p>
+	  
+	  
+	  
+	  <p>
+		<%= f.label :itemCategorias %><br />
+		<%= f.text_field :itemCategorias %>
+	  </p>
+	  <p>
+		<%= f.label :LanceInicial %><br />
+		<%= f.text_field :LanceInicial %>
+	  </p>
+	  <p>
+		<%= f.submit 'Criar Leilao' %>
+	  </p>
+	<% end %>
+
+	<%= link_to 'Voltar', leilaos_path %>
+	
+	
+	
+	
+
+</body>
+
+

@@ -9,7 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121119230801) do
+ActiveRecord::Schema.define(:version => 20121219230541) do
+
+  create_table "items", :force => true do |t|
+    t.integer  "idItem"
+    t.string   "nomeItem"
+    t.string   "linkfoto"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "lances", :force => true do |t|
     t.integer  "idLeilao"
@@ -21,9 +29,14 @@ ActiveRecord::Schema.define(:version => 20121119230801) do
   end
 
   create_table "leilaos", :force => true do |t|
-    t.string   "proprietario"
-    t.datetime "dataCriacao"
-    t.datetime "dataExpiracao"
+    t.integer  "idLeilao"
+    t.integer  "idProprietario"
+    t.integer  "Lances_id"
+    t.datetime "DataCriacao"
+    t.datetime "DataExpiracao"
+    t.integer  "Item_id"
+    t.string   "itemCategorias"
+    t.float    "LanceInicial"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

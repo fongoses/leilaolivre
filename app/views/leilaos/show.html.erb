@@ -1,58 +1,43 @@
 <p>
-  <b>Id:</b>
-  <%=h @leilao.id %>
+  <b>Idleilao:</b>
+  <%=h @leilao.idLeilao %>
 </p>
 
 <p>
-  <b>Proprietario:</b>
-  <%=h @leilao.proprietario %>
+  <b>Idproprietario:</b>
+  <%=h @leilao.idProprietario %>
 </p>
 
 <p>
   <b>Lances:</b>
+  <!--<%=h @leilao.Lances %>-->
 </p>
 
 <p>
   <b>Datacriacao:</b>
-  <%=h @leilao.dataCriacao %>
+  <%=h @leilao.DataCriacao %>
 </p>
 
 <p>
   <b>Dataexpiracao:</b>
-  <%=h @leilao.dataExpiracao %>
+  <%=h @leilao.DataExpiracao %>
 </p>
 
 <p>
   <b>Item:</b>
+  <!--<%=h @leilao.Item %>-->
 </p>
 
-	<h2>Lances Atuais</h2>
-	<% @leilao.lances.each do |lance| %>
-	  <p>
-	    <b>idUsuario:</b>
-	    <%=h lance.id%>
-	  </p>
-	<% end %>	 
-	<h2>Adicionar Lances:</h2>
-	<% form_for @leilao.lances.build do |f| %>
-	  <div class="field">
-	  </div>
+<p>
+  <b>Itemcategorias:</b>
+  <%=h @leilao.itemCategorias %>
+</p>
 
-	<div class ='field'>
-		<%= hidden_field_tag "userId", params[:id] %>
-	</div>
-
-	  <div class="actions">
-		User_id: <%= params[:id] %>
-		<%= f.submit %>
-  	  </div>
- 
-	<% end %>
+<p>
+  <b>Lanceinicial:</b>
+  <%=h @leilao.LanceInicial %>
+</p>
 
 
-	<br />
-	 
-	<%= link_to 'Edit Leilao', edit_leilao_path(@leilao) %> |
-	<%= link_to 'Back to Leilaos', leilaos_path %> |
-
-
+<%= link_to 'Edit', edit_leilao_path(@leilao) %> |
+<%= link_to 'Back', leilaos_path %>

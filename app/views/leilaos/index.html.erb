@@ -1,26 +1,82 @@
-<h1>Listing leilaos</h1>
+<head>
+<style type="text/css">
+body {
+	background-image:url('images/background.png');
+	background-repeat: repeat-x;
+	margin: 0px;
+}
+
+#divLogo{
+	
+	background-image:url('images/logo.png');
+	background-color: white;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 140px;
+}
+
+
+#divTopBar{
+	background-image:url('images/topbar.png');
+	background-repeat: repeat-x;
+	width: 100%;
+	height: 38px;
+}
+
+
+</STYLE>
+</head>
+
+
+
+
+
+
+<body>
+	
+	
+	<div id="divLogo"></div>
+	<div id="divTopBar"></div>	
+	
+	
+	<h1>Leiloes Atuais</h1>
 
 <table>
   <tr>
-    <th>Id</th>
-    <th>Proprietario</th>
+    <th>Idleilao</th>
+    <th>Idproprietario</th>
+    <th>Lances</th>
     <th>Datacriacao</th>
     <th>Dataexpiracao</th>
+    <th>Item</th>
+    <th>Itemcategorias</th>
+    <th>Lanceinicial</th>
   </tr>
 
 <% @leilaos.each do |leilao| %>
   <tr>
-    <td><%=h leilao.id %></td>
-    <td><%=h leilao.proprietario %></td>
-    <td><%=h leilao.dataCriacao %></td>
-    <td><%=h leilao.dataExpiracao %></td>
-    <td><%= link_to 'Show', leilao %></td>
-    <td><%= link_to 'Edit', edit_leilao_path(leilao) %></td>
-    <td><%= link_to 'Destroy', leilao, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%=h leilao.idLeilao %></td>
+    <td><%=h leilao.idProprietario %></td>
+    <td><%=h leilao.Lances %></td>
+    <td><%=h leilao.DataCriacao %></td>
+    <td><%=h leilao.DataExpiracao %></td>
+    <td><%=h leilao.Item %></td>
+    <td><%=h leilao.itemCategorias %></td>
+    <td><%=h leilao.LanceInicial %></td>
+    
+    
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New leilao', new_leilao_path %>
+<%= link_to 'Criar Leilao', new_leilao_path %>
+	
+	
+
+</body>
+
+
+
+

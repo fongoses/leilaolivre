@@ -1,10 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :items
-
-  map.resources :leilaos
-
-  map.resources :leilaos
-
  # map.resources :leilaos
 
 

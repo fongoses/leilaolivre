@@ -1,0 +1,23 @@
+<h1>Novo Item</h1>
+
+<% form_for(@item) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :idItem %><br />
+    <%= f.text_field :idItem %>
+  </p>
+  <p>
+    <%= f.label :nomeItem %><br />
+    <%= f.text_field :nomeItem %>
+  </p>
+  <p>
+    <%= f.label :linkfoto %><br />
+    <%= f.text_field :linkfoto %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Voltar', items_path %>

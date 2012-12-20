@@ -4,22 +4,36 @@
   <%= f.error_messages %>
 
   <p>
+    <%= f.label :idLeilao %><br />
+    <%= f.text_field :idLeilao %>
   </p>
   <p>
-    <%= f.label :proprietario %><br />
-    <%= f.text_field :proprietario %>
+    <%= f.label :idProprietario %><br />
+    <%= f.text_field :idProprietario %>
   </p>
   <p>
+    <%= f.label :Lances %><br />
+    <%= f.text_field :Lances %>
   </p>
   <p>
-    <%= f.label :dataCriacao %><br />
-    <%= f.datetime_select :dataCriacao %>
+    <%= f.label :DataCriacao %><br />
+    <%= f.datetime_select :DataCriacao %>
   </p>
   <p>
-    <%= f.label :dataExpiracao %><br />
-    <%= f.datetime_select :dataExpiracao %>
+    <%= f.label :DataExpiracao %><br />
+    <%= f.datetime_select :DataExpiracao %>
   </p>
   <p>
+    <%= f.label :Item %><br />
+    <%= f.text_field :Item %>
+  </p>
+  <p>
+    <%= f.label :itemCategorias %><br />
+    <%= f.text_field :itemCategorias %>
+  </p>
+  <p>
+    <%= f.label :LanceInicial %><br />
+    <%= f.text_field :LanceInicial %>
   </p>
   <p>
     <%= f.submit 'Update' %>

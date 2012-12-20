@@ -1,2 +1,82 @@
-<h1>Pesquisar#index</h1>
-<p>Find me in app/views/pesquisar/index.html.erb</p>
+<head>
+<style type="text/css">
+body {
+	background-image:url('images/background.png');
+	background-repeat: repeat-x;
+	margin: 0px;
+}
+
+#divLogo{
+	
+	background-image:url('images/logo.png');
+	background-color: white;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 140px;
+}
+
+
+#divTopBar{
+	background-image:url('images/topbar.png');
+	background-repeat: repeat-x;
+	width: 100%;
+	height: 38px;
+}
+
+h1{
+	color: dark-blue;
+}
+
+
+</STYLE>
+</head>
+
+
+
+
+
+
+<body>
+	
+	
+	<div id="divLogo"></div>
+	<div id="divTopBar"></div>
+	
+	<h1>Pesquisar Leilão</h1>
+	
+	
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Proprietario</th>
+    <th>Datacriacao</th>
+    <th>Dataexpiracao</th>
+  </tr>
+
+<% @leilaos.each do |leilao| %>
+  <tr>
+    <td><%=h leilao.id %></td>
+    <td><%=h leilao.proprietario %></td>
+    <td><%=h leilao.dataCriacao %></td>
+    <td><%=h leilao.dataExpiracao %></td>
+    <td><%= link_to 'Show', leilao %></td>
+    <td><%= link_to 'Edit', edit_leilao_path(leilao) %></td>
+    <td><%= link_to 'Destroy', leilao, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+
+</body>
+
