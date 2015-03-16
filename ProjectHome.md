@@ -1,0 +1,1 @@
+Este repositório é destinado ao armazenamento de todos os dados referentes às etapas de Projeto-Implementação do trabalho final da disciplina. Não se trata de um sistema completo, apenas um esboço de algumas funcionalidades solicitadas por nossos "clientes".
